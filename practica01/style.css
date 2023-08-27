@@ -1,0 +1,22 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    box-sizing: border-box;
+    margin: 0;
+}
+#izq{
+    width: 40%;
+    background-color: rgb(194, 78, 194);
+}
+#izq img{
+    border-radius: 100px;
+}
+
+#der{
+    background-color: rgb(68, 187, 161);
+}
+.container{
+    display: flex;
+    height: 100vh;
+}
