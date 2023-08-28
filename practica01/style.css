@@ -1,22 +1,72 @@
 html{
-    font-size: 62.5%;
+
 }
 body{
     box-sizing: border-box;
     margin: 0;
 }
-#izq{
-    width: 40%;
-    background-color: rgb(194, 78, 194);
-}
-#izq img{
-    border-radius: 100px;
-}
-
-#der{
-    background-color: rgb(68, 187, 161);
-}
-.container{
-    display: flex;
+.containergrid{
+    display: grid;
+    grid-template-columns: 25% auto;
     height: 100vh;
 }
+#izq{
+    display: grid;
+    grid-template-rows: 150px 20% 20%;
+    color: #89c4eb;
+    background-color: #8A307F;
+    padding: 40px;
+
+}
+h2{
+    font-size: xx-large;
+}
+#izq h2{
+    text-align: center;margin-bottom: 0px;
+}
+#izq p{
+    margin-top: 5%;
+    margin-bottom: 0px; 
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#izq img{
+    justify-self: center;
+    height: 125px;
+    width: 125px;
+    border-radius: 100px;
+    border: 5px solid #6883BC;
+}
+#izq hr{
+    height: 2px;
+    background-color: #50003f;
+    border: none;
+}
+#izq #proftext{
+    align-self: end;
+}
+#der{
+    display: grid;
+    
+    background-color: #79A7D3;
+    padding-left: 110px;
+    padding-right: 100px;
+    padding-top: 20px;
+    color:#d6f4f8;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#der h1{
+    font-size: 60px;
+    color: #50003f;
+    margin-bottom: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#der h2{
+    font-family: 'Times New Roman', Times, serif;
+}
+#der a{
+    text-decoration: none;
+    color:#d6f4f8;
+}
+
