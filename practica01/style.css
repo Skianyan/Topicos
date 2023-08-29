@@ -1,6 +1,3 @@
-html{
-
-}
 body{
     box-sizing: border-box;
     margin: 0;
@@ -16,7 +13,7 @@ body{
     color: #89c4eb;
     background-color: #8A307F;
     padding: 40px;
-
+    min-width: 250px;
 }
 h2{
     font-size: xx-large;
