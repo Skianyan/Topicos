@@ -24,6 +24,12 @@ form{
     row-gap: 10px;
     font-weight: bold;
 }
+label{
+    text-transform: uppercase;
+}
+#validar{
+    text-transform: uppercase;
+}
 .grid-item{
     font-weight: bold;
 }
