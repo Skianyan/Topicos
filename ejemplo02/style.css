@@ -61,7 +61,12 @@ label{
     width: 100%;
     border-width: 0px;
     border-radius: 5px;
-    background-color: rgb(182, 216, 216);
+    background-color: rgb(160, 220, 220);
     color: azure;
     font-weight: bolder;
+}
+#login:hover{
+    background-color: rgb(116, 161, 161);
+    color: rgb(143, 207, 207);
+    cursor:pointer;
 }
