@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom,rgb(119, 160, 165),rgb(158, 115, 147));
+}
+main{
+    display: grid;
+    grid-template-rows: auto auto;
+    text-align: center;
+}
+form{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    padding: 30px;
+    background-color: rgb(228, 164, 228);
+    border-radius: 10px;
+    column-gap: 10px;
+    row-gap: 10px;
+    font-weight: bold;
+}
+label{
+    text-transform: uppercase;
+}
+#validar{
+    text-transform: uppercase;
+}
+.grid-item{
+    font-weight: bold;
+}
+.grid-item1{
+    display: grid;
+    grid-template-rows: auto auto;
+    text-align: center;
+}
+.grid-item2{
+    display: grid;
+    grid-template-rows: auto auto;
+    text-align: center;
+}
+.grid-item3{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+#name{
+    border-radius: 5px;
+    height: 25px;
+}
+#pass{
+    border-radius: 5px;
+    height: 25px;
+}
+#login{
+    height: 30px;
+    width: 100%;
+    border-width: 0px;
+    border-radius: 5px;
+    background-color: rgb(182, 216, 216);
+    color: azure;
+    font-weight: bolder;
+}
