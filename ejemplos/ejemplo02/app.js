@@ -7,8 +7,6 @@ function handleEvent(e) {
 	const userName = document.getElementById("name").value;
 	const userPass = document.getElementById("pass").value;
 
-	console.log(userPass.length);
-
 	if (userName === "" || userPass === "") {
 		p1.innerHTML = `Los campos no pueden estar vacios`;
 	} else if (userPass.length <= 5) {
