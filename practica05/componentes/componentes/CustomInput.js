@@ -3,8 +3,8 @@ export default function CustomInput({titleLabel,placeholderLabel}) {
     div.classList = 'grupo';
   
     div.innerHTML = `
-          <label>${titleLabel}</label>
-          <input placeholder='${placeholderLabel}' />        
+          <label class="inputTitle">${titleLabel}</label>
+          <input class="formInput" placeholder='${placeholderLabel}' />        
       `;
   
     return div;

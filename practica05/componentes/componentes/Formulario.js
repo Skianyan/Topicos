@@ -15,7 +15,7 @@ export default function Formulario(){
     },
     {
       titleLabel: 'Correo Electrónico',
-      placeholderLabel: 'Correo Electrónica',
+      placeholderLabel: 'Correo Electrónico',
     },
     {
       titleLabel: 'Síntomas',
@@ -31,7 +31,10 @@ export default function Formulario(){
   //     form.appendChild(CustomInput(input));
   //   });
 
+  const button = document.createElement('button');
+  button.classList = 'formButton';
+  button.innerHTML = 'enviar'
+  form.appendChild(button);
   return form;
 
-    return form
 }

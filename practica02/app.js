@@ -14,3 +14,4 @@ function handleEvent(e) {
 }
 
 button.addEventListener('click', handleEvent, false);
+

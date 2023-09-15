@@ -62,13 +62,10 @@ const restaurant = {
 // const {name} = restaurant
 // console.log(name)
 
-
 // Destructuring Object , schedule, friday
-const { 
+const {
 	schedule: {
-		fri: {
-			open,
-			close
-		}
-} } = restaurant;
+		fri: { open, close },
+	},
+} = restaurant;
 console.log(open, close);
