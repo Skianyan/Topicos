@@ -1,10 +1,10 @@
-export default function CustomInput({titleLabel,placeholderLabel}) {
+export default function CustomInput({titleLabel,placeholderLabel,id}) {
     const div = document.createElement('div');
     div.classList = 'grupo';
   
     div.innerHTML = `
-          <label class="inputTitle">${titleLabel}</label>
-          <input class="formInput" placeholder='${placeholderLabel}' />        
+          <label for=${id} class="inputTitle">${titleLabel}</label>
+          <input id=${id} class="formInput" placeholder='${placeholderLabel}' />        
       `;
   
     return div;
