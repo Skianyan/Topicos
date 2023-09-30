@@ -3,7 +3,7 @@ import Form from "./components/Form";
 import React, { useState } from "react";
 
 export default function Home() {
-	const [resultado, setResultado] = useState("Sin resultado");
+	const [resultado, setResultado] = useState("");
 	useState("");
 
 	const [error, setError] = useState("");
@@ -27,7 +27,7 @@ export default function Home() {
             font-bold p-3 
            bg-purple-300 
             rounded-md  ">
-					{resultado}
+					{resultado.toFixed(2)}
 				</section>
 			)}
 		</main>

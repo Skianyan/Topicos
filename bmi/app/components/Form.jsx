@@ -39,7 +39,7 @@ const Form = ({ setResultado, setError }) => {
 						Estatura
 					</label>
 					<input
-						type="text"
+						type="number"
 						placeholder="Estatura en CM"
 						className="bg-blue-200 p-2 rounded-md"
 						value={estatura}
@@ -51,7 +51,7 @@ const Form = ({ setResultado, setError }) => {
 						Peso
 					</label>
 					<input
-						type="text"
+						type="number"
 						placeholder="Peso en KG"
 						className="bg-blue-200 p-2 rounded-md "
 						value={peso}
