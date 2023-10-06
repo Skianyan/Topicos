@@ -3,6 +3,8 @@ import React from 'react'
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
 
+
+
 const Navbar = () => {
   return (
         <nav className='bg-slate-400 w-min-[400px] w-[20%] p-10 '>
