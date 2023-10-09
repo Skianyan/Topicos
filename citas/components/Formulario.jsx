@@ -12,7 +12,7 @@ const Formulario = () => {
 						type="text"
 						id="nombre"
 						className="p-2 rounded-md"
-						placeholder="Nombre Paciente"
+						placeholder="Nombre del paciente"
 					/>
 				</div>
                 <div className="flex flex-col space-y-1">
@@ -23,7 +23,7 @@ const Formulario = () => {
 						type="text"
 						id="edad"
 						className="p-2 rounded-md"
-						placeholder="edad Paciente"
+						placeholder="Edad del paciente"
 					/>
                 <div className="flex flex-col space-y-1">
 					<label htmlFor="genero" className="font font-semibold uppercase">
@@ -33,7 +33,7 @@ const Formulario = () => {
 						type="text"
 						id="genero"
 						className="p-2 rounded-md"
-						placeholder="genero Paciente"
+						placeholder="Genero del paciente"
 					/>
 				</div>        
 				</div>
@@ -45,7 +45,7 @@ const Formulario = () => {
 						type="text"
 						id="telefono"
 						className="p-2 rounded-md"
-						placeholder="telefono Paciente"
+						placeholder="Telefono del paciente"
 					/>
 				</div>
                 <div className="flex flex-col space-y-1">
@@ -56,7 +56,7 @@ const Formulario = () => {
 						type="text"
 						id="sintomas"
 						className="p-2 rounded-md resize-none"
-						placeholder="Sintomas Paciente"
+						placeholder="Sintomas del paciente"
 					/>
 				</div>
                 <div>
