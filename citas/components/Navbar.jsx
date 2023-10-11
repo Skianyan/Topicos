@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Popover, Transition } from "@headlessui/react";
-import { AiOutlineMenu} from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import AssignmentIcon from "@mui/icons-material/Assignment";
@@ -12,10 +12,10 @@ import { useState } from "react";
 const Navbar = () => {
 	const [isShowing, setIsShowing] = useState(false);
 	return (
-		<header className="min-w-min[150px] w-[25%] ">
+		<header className="sm:w-[25%] bg-slate-400 p-2">
 			{/* Normal Menu */}
 			<Popover className="hidden sm:flex flex-col w-full h-full bg-slate-400 p-4 items-center">
-            <ul className="text-white space-y-5 ">
+				<ul className="text-white space-y-5 ">
 					<li className="space-x-2 flex">
 						<div>
 							<HomeIcon />
@@ -59,15 +59,35 @@ const Navbar = () => {
 					leaveFrom="opacity-100"
 					leaveTo="opacity-0"
 				>
-					<Popover.Panel className="bg-slate-500 absolute w-[85%] h-full rounded-lg">
-						<div className="flex flex-col ml-4 gap-2 p-2">
-							<div className="flex ">
-								<Link href="/">Inicio</Link>
-							</div>
+					<Popover.Panel className="bg-slate-500 absolute w-[85%] h-full rounded-lg p-2">
+						<ul className="text-white space-y-5 ">
+							<li className="space-x-2 flex">
+								<div>
+									<HomeIcon />
+								</div>
+								<div>
+									<Link href={"/"}>Inicio</Link>
+								</div>
+							</li>
 
-							<Link href="/">Tienda</Link>
-							<Link href="/">Acerca de</Link>
-						</div>
+							<li className="space-x-2 flex">
+								<div>
+									<AssignmentIcon />
+								</div>
+								<div>
+									<Link href={"/citas"}>Agendar cita</Link>
+								</div>
+							</li>
+
+							<li className="space-x-2 flex">
+								<div>
+									<InfoIcon />
+								</div>
+								<div>
+									<Link href={"/acercade"}>Acerca de</Link>
+								</div>
+							</li>
+						</ul>
 					</Popover.Panel>
 				</Transition>
 			</Popover>
