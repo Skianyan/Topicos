@@ -12,7 +12,7 @@ import { useState } from "react";
 const Navbar = () => {
 	const [isShowing, setIsShowing] = useState(false);
 	return (
-		<header className="sm:w-[25%] bg-slate-400 p-2">
+		<header className="sm:w-[25%] sm:min-w-[170px] bg-slate-400 p-2">
 			{/* Normal Menu */}
 			<Popover className="hidden sm:flex flex-col w-full h-full bg-slate-400 p-4 items-center">
 				<ul className="text-white space-y-5 ">
