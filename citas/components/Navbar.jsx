@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Popover, Transition } from "@headlessui/react";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu, AiFillCloseCircle } from "react-icons/ai";
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import AssignmentIcon from "@mui/icons-material/Assignment";
@@ -10,6 +10,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const Navbar = () => {
+	const [isActive, setIsActive] = useState(false);
 	const [isShowing, setIsShowing] = useState(false);
 	return (
 		<header className="sm:w-[25%] sm:min-w-[170px] bg-slate-400 p-2">
@@ -47,7 +48,19 @@ const Navbar = () => {
 			{/* Responsive Menu */}
 			<Popover className="sm:hidden">
 				<Popover.Button onClick={() => setIsShowing((isShowing) => !isShowing)}>
-					<AiOutlineMenu size="30"></AiOutlineMenu>
+					{isActive ? (
+						<AiFillCloseCircle size={30}
+							onClick={() => {
+								setIsActive(!isActive);
+							}}
+						/>
+					) : (
+						<AiOutlineMenu size={30}
+							onClick={() => {
+								setIsActive(!isActive);
+							}}
+						/>
+					)}
 				</Popover.Button>
 
 				<Transition
