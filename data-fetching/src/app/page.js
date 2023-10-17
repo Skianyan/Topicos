@@ -1,5 +1,6 @@
 import React from "react";
-import Image from "next/image";
+
+import Card from "../components/Card";
 
 async function getProducts() {
 	const response = await fetch("https://fakestoreapi.com/products");
@@ -11,13 +12,9 @@ const page = async () => {
 
 	return (
 		<div>
-			<h1>Tienda</h1>
 			{data.map((items) => (
-				<div key={items.id} className="flex">
-					<p>{items.title}</p>
-					<p>{items.price}</p>
-					<p>{items.description}</p>
-					<Image src={items.image} alt="hola" width={200} height={200} />
+				<div className="w-[100%]">
+					<Card {...items} />
 				</div>
 			))}
 		</div>
