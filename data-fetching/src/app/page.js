@@ -1,22 +1,21 @@
 import React from "react";
+import Link from "next/link";
 
-import Card from "../components/Card";
-
-async function getProducts() {
-	const response = await fetch("https://fakestoreapi.com/products");
-	return response.json();
-}
-
-const page = async () => {
-	const data = await getProducts();
-
+const page = () => {
 	return (
-		<div>
-			{data.map((items) => (
-				<div className="w-[100%]">
-					<Card {...items} />
-				</div>
-			))}
+		<div className="flex flex-col m-2 space-y-2">
+			<Link
+				className="bg-slate-300 p-2 w-52 rounded-md border border-slate-800"
+				href={"/dummyapi"}
+			>
+				dummyapi
+			</Link>
+			<Link
+				className="bg-slate-300 p-2 w-52 rounded-md border border-slate-800"
+				href={"/fakestoreapi"}
+			>
+				fakestoreapi
+			</Link>
 		</div>
 	);
 };

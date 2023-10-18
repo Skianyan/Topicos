@@ -9,7 +9,7 @@ export default function Home() {
 	const [error, setError] = useState("");
 
 	return (
-		<main className="flex flex-col items-center space-y-5">
+		<main className="flex flex-col items-center space-y-5 h-full min-h-full">
 			<section>
 				<h1 className="text-3xl text-bold mt-10">Indice de Masa Corporal</h1>
 			</section>
@@ -26,7 +26,8 @@ export default function Home() {
 					className="text-2xl 
             font-bold p-3 
            bg-purple-300 
-            rounded-md  ">
+            rounded-md"
+				>
 					{resultado.toFixed(2)}
 				</section>
 			)}

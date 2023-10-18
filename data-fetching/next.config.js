@@ -6,6 +6,14 @@ const nextConfig = {
 				protocol: "https",
 				hostname: "fakestoreapi.com/**",
 			},
+			{
+				protocol: "https",
+				hostname: "dummyjson.com/**",
+			},
+			{
+				protocol: "https",
+				hostname: "i.dummyjson.com/**",
+			},
 		],
 	},
 };

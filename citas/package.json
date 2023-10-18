@@ -14,7 +14,7 @@
     "@headlessui/react": "^1.7.17",
     "@mui/icons-material": "^5.14.11",
     "@mui/material": "^5.14.11",
-    "next": "latest",
+    "next": "^13.5.5",
     "react": "latest",
     "react-dom": "latest",
     "react-icons": "^4.11.0"
