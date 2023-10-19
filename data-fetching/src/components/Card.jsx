@@ -1,7 +1,9 @@
 import Image from "next/image";
-import { Amaranth } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+
+const poppins = Poppins({ subsets: ["latin"], weight:['400'] });
 
 export default function Card({
 	id,
