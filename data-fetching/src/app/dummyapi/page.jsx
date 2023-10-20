@@ -6,7 +6,7 @@ const page = async () => {
 	const { products } = await getDummyProducts();
 
 	return (
-		<div className="flex flex-row flex-wrap justify-items-center gap-4 mt-4">
+		<div className="flex flex-col sm:flex-row sm:flex-wrap justify-items-center gap-4 mt-4">
 			{products.map((item) => (
 				<DummyCard item={item} />
 			))}
