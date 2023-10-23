@@ -1,31 +1,23 @@
 "use client";
-import Link from "next/link";
+
 import React from "react";
+import { Popover, Transition } from "@headlessui/react";
+import { AiOutlineMenu, AiFillCloseCircle } from "react-icons/ai";
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import AssignmentIcon from "@mui/icons-material/Assignment";
-import Hamburger from "./Hamburger";
+import Link from "next/link";
 import { useState } from "react";
 
-
-
 const Navbar = () => {
-	const [hamburgerOpen, setHamburgerOpen] = useState(false);
-
-	const toggleHamburger = () => {
-		setHamburgerOpen(!hamburgerOpen);
-	};
-
-
+	const [isActive, setIsActive] = useState(false);
+	const [isShowing, setIsShowing] = useState(false);
 	return (
-		<>
-			<nav className="navigation bg-slate-400 w-min-[400px] w-[20%] p-10 ">
-				<div className="hamburger" onClick={toggleHamburger}>
-					<Hamburger />
-				</div>
-
-				<ul className="text-white space-y-5">
-					<li className="space-x-2 flex" onClick={toggleHamburger}>
+		<header className="sm:w-[25%] sm:min-w-[170px] bg-slate-400 p-2">
+			{/* Normal Menu */}
+			<Popover className="hidden sm:flex flex-col w-full h-full bg-slate-400 p-4 items-center">
+				<ul className="text-white space-y-5 ">
+					<li className="space-x-2 flex">
 						<div>
 							<HomeIcon />
 						</div>
@@ -34,7 +26,7 @@ const Navbar = () => {
 						</div>
 					</li>
 
-					<li className="space-x-2 flex" onClick={toggleHamburger}>
+					<li className="space-x-2 flex">
 						<div>
 							<AssignmentIcon />
 						</div>
@@ -43,7 +35,7 @@ const Navbar = () => {
 						</div>
 					</li>
 
-					<li className="space-x-2 flex" onClick={toggleHamburger}>
+					<li className="space-x-2 flex">
 						<div>
 							<InfoIcon />
 						</div>
@@ -52,41 +44,67 @@ const Navbar = () => {
 						</div>
 					</li>
 				</ul>
-			</nav>
-			<style jsx>{`
-        .navigation li{
-          width: fit-content;
-        }
+			</Popover>
+			{/* Responsive Menu */}
+			<Popover className="sm:hidden">
+				<Popover.Button onClick={() => setIsShowing((isShowing) => !isShowing)}>
+					{isActive ? (
+						<AiFillCloseCircle size={30}
+							onClick={() => {
+								setIsActive(!isActive);
+							}}
+						/>
+					) : (
+						<AiOutlineMenu size={30}
+							onClick={() => {
+								setIsActive(!isActive);
+							}}
+						/>
+					)}
+				</Popover.Button>
 
-        .hamburger{
-          display: none;
-        }
+				<Transition
+					show={isShowing}
+					enter="transition-opacity duration-75"
+					enterFrom="opacity-0"
+					enterTo="opacity-100"
+					leave="transition-opacity duration-150"
+					leaveFrom="opacity-100"
+					leaveTo="opacity-0"
+				>
+					<Popover.Panel className="bg-slate-500 absolute w-[85%] h-full rounded-lg p-2">
+						<ul className="text-white space-y-5 ">
+							<li className="space-x-2 flex">
+								<div>
+									<HomeIcon />
+								</div>
+								<div>
+									<Link href={"/"}>Inicio</Link>
+								</div>
+							</li>
 
-        @media (max-width: 1200px){
-          .hamburger{
-            display: block;
-            padding-top: 0px;
-            margin-left: 0px;
-            z-index; 10px; //just in case
-          }
-          
-          .navigation{
-            width: 100px;
-          }
+							<li className="space-x-2 flex">
+								<div>
+									<AssignmentIcon />
+								</div>
+								<div>
+									<Link href={"/citas"}>Agendar cita</Link>
+								</div>
+							</li>
 
-          .navigation ul{
-            display: ${hamburgerOpen ? "block" : "none"};
-            background-color: grey;
-            height: 30vh;
-            width: 30vw;
-            border-radius: 15px;
-            margin-top: 0px;
-            position: fixed;
-            padding: 15px;
-          }
-
-        `}</style>
-		</>
+							<li className="space-x-2 flex">
+								<div>
+									<InfoIcon />
+								</div>
+								<div>
+									<Link href={"/acercade"}>Acerca de</Link>
+								</div>
+							</li>
+						</ul>
+					</Popover.Panel>
+				</Transition>
+			</Popover>
+		</header>
 	);
 };
 
