@@ -3,6 +3,7 @@ import { getDummyProducts } from "@/libs";
 import DummyCard from "@/components/DummyCard";
 
 const page = async () => {
+	//destructurar 'products' del objeto
 	const { products } = await getDummyProducts();
 
 	return (
