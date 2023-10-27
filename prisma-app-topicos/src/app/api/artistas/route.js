@@ -29,14 +29,14 @@ export async function GET() {
 export async function POST(request) {
 	const { nombre, edad, banda, generoMusical } = await request.json();
 
-	const nuevoArtista = await prisma.artista.create({
+	const updateArtista = await prisma.artista.create({
 		data: {
 			nombre: nombre,
-			edad: edad,
+			edad: Number(edad),
 			banda: banda,
 			generoMusical: generoMusical,
 		},
 	});
 
-	return NextResponse.json(nuevoArtista);
+	return NextResponse.json(updateArtista);
 }
