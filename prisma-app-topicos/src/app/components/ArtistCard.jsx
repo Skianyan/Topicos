@@ -5,10 +5,12 @@ import { faUser, faGear } from "@fortawesome/free-solid-svg-icons";
 //estado para facilitar navegacion
 import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useArtistContext } from "../provider/artistProvider";
 
 const ArtistCard = ({ item }) => {
 	//se crea instancia para navegar
-	const router = new useRouter();
+	const route = useRouter();
+	const { setArtist } = useArtistContext();
 	return (
 		<div
 			key={item.id}
@@ -19,7 +21,8 @@ const ArtistCard = ({ item }) => {
 					<FontAwesomeIcon icon={faUser} height={16} width={16} />
 					<a
 						onClick={() =>
-							router.push(`http://localhost:3000/artistlist/${item.id}`)
+							//setArtist(item)
+							route.push(`http://localhost:3000/artistlist/${item.id}`)
 						}
 					>
 						<FontAwesomeIcon icon={faGear} height={16} width={16} />

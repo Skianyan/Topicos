@@ -1,24 +1,32 @@
 "use client";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import { useArtistContext } from "../provider/artistProvider";
 
 const EditForm = ({ artist }) => {
-	console.log(artist);
-	const [data, setData] = useState(null);
-	useEffect(() => {
-		setData({ nombre: artist.nombre });
-	}, []);
-	console.log(data);
 	const [nombre, setNombre] = useState("");
 	const [edad, setEdad] = useState("");
 	const [banda, setBanda] = useState("");
 	const [generoMusical, setGeneroMusical] = useState("");
+
+	const [error, setError] = useState("");
 	const router = useRouter();
+	const { artist } = useArtistContext();
+
+	useEffect(() => {
+		if ((artist /= null)) {
+			setNombre = artist.nombre;
+			setEdad = artist.edad;
+			setBanda = artist.banda;
+			setGeneroMusical = artist.generoMusical;
+		}
+	}, [artist]);
 
 	const submitData = async (e) => {
 		e.preventDefault();
 		try {
 			const body = { nombre, edad, banda, generoMusical };
+			console.log(body);
 			await fetch(`/api/artistas/${id}`, {
 				method: "PUT",
 				headers: { "Content-Type": "application/json" },
@@ -39,11 +47,11 @@ const EditForm = ({ artist }) => {
 	};
 
 	const delet = async () => {
+		const { id } = artist;
 		await fetch(`/api/artistas/${id}`, {
 			method: "DELETE",
-			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify(body),
 		});
+		router.push("/artistlist");
 	};
 
 	return (
