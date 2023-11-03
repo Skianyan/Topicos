@@ -32,7 +32,7 @@ export async function POST(request) {
 	const nuevoArtista = await prisma.artista.create({
 		data: {
 			nombre: nombre,
-			edad: edad,
+			edad: Number(edad),
 			banda: banda,
 			generoMusical: generoMusical,
 		},

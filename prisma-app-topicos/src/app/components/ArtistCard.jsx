@@ -20,10 +20,10 @@ const ArtistCard = ({ item }) => {
 				<div className="self-center flex flex-col space-y-4 mx-4">
 					<FontAwesomeIcon icon={faUser} height={16} width={16} />
 					<a
-						onClick={() =>
-							//setArtist(item)
-							route.push(`http://localhost:3000/artistlist/${item.id}`)
-						}
+						onClick={() => {
+							setArtist(item);
+							route.push(`http://localhost:3000/artistlist/${item.id}`);
+						}}
 					>
 						<FontAwesomeIcon icon={faGear} height={16} width={16} />
 					</a>

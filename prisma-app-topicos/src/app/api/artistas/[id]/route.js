@@ -61,7 +61,7 @@ export async function PUT(request, { params: { id } }) {
 			},
 			data: {
 				nombre: nombre,
-				edad: edad,
+				edad: Number(edad),
 				banda: banda,
 				generoMusical: generoMusical,
 			},

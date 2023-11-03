@@ -13,7 +13,7 @@ datasource db {
 model Artista {
   id Int @id @default(autoincrement())
   nombre String
-  edad String
+  edad Int
   banda String
   generoMusical String
 }
