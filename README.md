@@ -1,5 +1,6 @@
 ## Topicos
- Materia de Topicos Avanzados de Programación.
+ Materia de Topicos Avanzados de Programación. Los ejercicios en este repositorio incluyen:
+ 
  - Diversos ejercicios de paginas web con JavaScript
  - Utilizacion de componentes de React
- - Pruebas de React-Native
+ - Pruebas con React-Native
